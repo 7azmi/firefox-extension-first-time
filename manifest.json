@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Example Background Changer",
+  "version": "1.0",
+  "description": "Changes the background color of example.com",
+  "content_scripts": [
+    {
+      "matches": ["*://example.com/*"],
+      "js": ["content-scripts/change-background.js"]
+    }
+  ],
+  "host_permissions": [
+    "*://example.com/*"
+  ]
+  // No "permissions" array needed if you only need host permissions and no specific API permissions yet
+}
